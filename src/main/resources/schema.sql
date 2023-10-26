@@ -12,6 +12,8 @@ CREATE TABLE Utilisateur (
                              email VARCHAR(255) NOT NULL
 );
 
+
+
 CREATE TABLE Serie (
                        id INT PRIMARY KEY,
                        titre VARCHAR(255) NOT NULL,
@@ -46,7 +48,7 @@ CREATE TABLE Partage (
                          id INT PRIMARY KEY,
                          serie_id INT,
                          utilisateur_id INT,
-                         type_permission VARCHAR(50),
+                         modification BOOL,
                          FOREIGN KEY (serie_id) REFERENCES Serie(id),
                          FOREIGN KEY (utilisateur_id) REFERENCES Utilisateur(id)
 );

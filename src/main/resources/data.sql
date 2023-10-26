@@ -8,7 +8,9 @@ INSERT INTO Utilisateur (id, nom_utilisateur, mot_de_passe, email) VALUES
 INSERT INTO Serie (id, titre, description, utilisateur_id) VALUES
                                                                (1, 'Serie1', 'Première série temporelle', 1),
                                                                (2, 'Serie2', 'Deuxième série temporelle', 2),
-                                                               (3, 'Serie3', 'Troisième série temporelle', 3);
+                                                               (3, 'Serie3', 'Troisième série temporelle', 3),
+                                                               (4, 'Serie4', 'Quatrième série temporelle', 1),
+                                                               (5, 'Serie5', 'Cinquième série temporelle', 1);
 
 -- Données pour la table Evenement
 INSERT INTO Evenement (id, date, valeur, commentaire, serie_id) VALUES
@@ -34,7 +36,7 @@ INSERT INTO Evenement_Tag (id, evenement_id, tag_id) VALUES
                                                          (6, 5, 1);
 
 -- Données pour la table Partage
-INSERT INTO Partage (id, serie_id, utilisateur_id, type_permission) VALUES
-                                                                        (1, 1, 2, 'lecture seule'),
-                                                                        (2, 2, 3, 'modification'),
-                                                                        (3, 3, 1, 'lecture seule');
+INSERT INTO Partage (id, serie_id, utilisateur_id, modification) VALUES
+                                                                        (1, 1, 2, TRUE),
+                                                                        (2, 2, 3, FALSE),
+                                                                        (3, 3, 1, TRUE);
